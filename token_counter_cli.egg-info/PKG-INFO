@@ -1,0 +1,84 @@
+Metadata-Version: 2.4
+Name: token-counter-cli
+Version: 0.1.0
+Summary: Cross-model token counting command-line tool
+Author-email: Token Counter CLI <info@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/example/token-counter-cli
+Project-URL: Repository, https://github.com/example/token-counter-cli
+Project-URL: Issues, https://github.com/example/token-counter-cli/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: tiktoken>=0.5.0
+Requires-Dist: httpx>=0.24.0
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: pytest-mock>=3.10.0; extra == "dev"
+Requires-Dist: httpx-mock>=0.10.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: isort>=5.12.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"
+
+# Token Counter CLI
+
+Cross-model token counting command-line tool that provides accurate token counts for multiple LLM models in a single run.
+
+## Installation
+
+```bash
+pip install token-counter-cli
+```
+
+## Usage
+
+```bash
+# Count tokens from stdin for default models (gpt-4o, claude-3-5-sonnet)
+echo "Hello world" | tc
+
+# Count tokens from a file
+tc --file input.txt
+
+# Count tokens from structured messages
+tc --messages messages.json
+
+# Output in JSON format
+tc --json < input.txt
+```
+
+## Supported Models
+
+- **gpt-4o**: Local counting via tiktoken (approximate for messages)
+- **claude-3-5-sonnet**: Provider counting via Anthropic API
+
+## Environment Variables
+
+- `ANTHROPIC_API_KEY`: Required for claude-3-5-sonnet counting
+- `NO_COLOR`: Disables ANSI color output
+
+## Development
+
+```bash
+# Install development dependencies
+pip install -e ".[dev]"
+
+# Run tests
+pytest
+
+# Type checking
+mypy token_counter_cli
+```
+
+## License
+
+MIT

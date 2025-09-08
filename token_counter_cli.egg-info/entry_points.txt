@@ -1,0 +1,2 @@
+[console_scripts]
+tc = token_counter_cli.main:cli_entry_point

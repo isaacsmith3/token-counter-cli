@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+tests/test_cli.py
+token_counter_cli/__init__.py
+token_counter_cli/cli.py
+token_counter_cli/main.py
+token_counter_cli.egg-info/PKG-INFO
+token_counter_cli.egg-info/SOURCES.txt
+token_counter_cli.egg-info/dependency_links.txt
+token_counter_cli.egg-info/entry_points.txt
+token_counter_cli.egg-info/requires.txt
+token_counter_cli.egg-info/top_level.txt
