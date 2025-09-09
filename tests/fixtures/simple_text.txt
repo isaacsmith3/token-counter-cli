@@ -1,0 +1,4 @@
+This is a simple text file for testing the token counter CLI.
+It contains multiple lines and should be read as plain text.
+
+The tool should count tokens for this content across different models.

@@ -1,0 +1,28 @@
+{
+  "gpt-4o": {
+    "simple_text": {
+      "input": "Hello, world!",
+      "expected_tokens": 4
+    },
+    "multiline_text": {
+      "input": "Line 1\nLine 2\nLine 3",
+      "expected_tokens": 11
+    },
+    "unicode_text": {
+      "input": "Hello 世界! 🌍 Café naïve résumé",
+      "expected_tokens": 9
+    },
+    "code_text": {
+      "input": "def hello_world():\n    print(\"Hello, world!\")\n    return 42",
+      "expected_tokens": 15
+    },
+    "empty_text": {
+      "input": "",
+      "expected_tokens": 0
+    },
+    "long_sentence": {
+      "input": "The quick brown fox jumps over the lazy dog.",
+      "expected_tokens": 10
+    }
+  }
+}
