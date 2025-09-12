@@ -27,7 +27,7 @@ tc --json < input.txt
 ## Supported Models
 
 - **gpt-4o**: Local counting via tiktoken (approximate for messages)
-- **claude-3-5-sonnet**: Provider counting via Anthropic API
+- **claude-3-5-sonnet**: Provider counting via Anthropic API (in the future)
 
 ## Environment Variables
 
